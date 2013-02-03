@@ -17,7 +17,7 @@ namespace BRApplication.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your app description page.";
+            ViewBag.Message = "ASMA";
 
             return View();
         }
