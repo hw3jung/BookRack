@@ -42,7 +42,9 @@ local.properties
 *.sln.docstates
 *.sln
 *.csproj
+*.suo
 web.config
+
 
 # Build results
 [Dd]ebug/
