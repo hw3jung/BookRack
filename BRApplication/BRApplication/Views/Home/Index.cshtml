@@ -18,6 +18,24 @@
         </div>
     </section>
 }
+
+<div>
+    @Html.TextBox("txtTest");
+    <input id="btn" type="submit" onclick="ClickMe" />
+</div>
+<script type="text/ecmascript">
+    $(function () {
+        function ClickMe() {
+            $.ajax({
+                url: @(Url.Action("InsertIt", "Home")),
+                dataType: "POST",
+                data: {x :$("txtTest").val}
+            }); 
+        }
+    }); 
+</script>
+
+
 <h3>We suggest the following:</h3>
 <ol class="round">
     <li class="one">
