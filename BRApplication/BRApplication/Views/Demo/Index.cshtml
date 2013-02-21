@@ -24,6 +24,7 @@
     }
 
     function UpdatePartial(status) {
+        alert(status);
         $.ajax({
             url: '@Url.Action("UpdatePartial", "Demo")',
             data: { status: status },
