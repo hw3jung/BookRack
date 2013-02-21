@@ -1,70 +1,63 @@
-﻿<div class="home">
-    <a class="home" href="" title="Buy Textbooks">BUY</a>
-    <a class="home" href="" title="Sell Textbooks">SELL</a>
-</div>
-
-@*@{
-    viewbag.title = "home page";
+﻿@{
+    ViewBag.Title = "Home Page";
 }
-
 @section featured {
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>@viewbag.title.</h1>
-                <h2>@viewbag.message</h2>
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
             </hgroup>
             <p>
-                to learn more about asp.net mvc visit
-                <a href="http://asp.net/mvc" title="asp.net mvc website">http://asp.net/mvc</a>.
-                the page features <mark>videos, tutorials, and samples</mark> to help you get the most from asp.net mvc.
-                if you have any questions about asp.net mvc visit
-                <a href="http://forums.asp.net/1146.aspx/1?mvc" title="asp.net mvc forum">our forums</a>.
+                To learn more about ASP.NET MVC visit
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                If you have any questions about ASP.NET MVC visit
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
             </p>
         </div>
     </section>
 }
 
 <div>
-    @html.textbox("txttest");
-    <input id="btn" type="submit" onclick="clickme" />
+    @Html.TextBox("txtTest");
+    <input id="btn" type="submit" onclick="ClickMe" />
 </div>
 <script type="text/ecmascript">
     $(function () {
-        function clickme() {
+        function ClickMe() {
             $.ajax({
-                url: @(url.action("insertit", "home")),
-                datatype: "post",
-                data: {x :$("txttest").val}
+                url: @(Url.Action("InsertIt", "Home")),
+                dataType: "POST",
+                data: {x :$("txtTest").val}
             }); 
         }
     }); 
 </script>
 
 
-<h3>we suggest the following:</h3>
+<h3>We suggest the following:</h3>
 <ol class="round">
     <li class="one">
-        <h5>getting started</h5>
-        asp.net mvc gives you a powerful, patterns-based way to build dynamic websites that
+        <h5>Getting Started</h5>
+        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
         enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. asp.net mvc includes many features that enable
-        fast, tdd-friendly development for creating sophisticated applications that use
+        for enjoyable, agile development. ASP.NET MVC includes many features that enable
+        fast, TDD-friendly development for creating sophisticated applications that use
         the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?linkid=245151">learn more…</a>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
     </li>
 
     <li class="two">
-        <h5>add nuget packages and jump-start your coding</h5>
-        nuget makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?linkid=245153">learn more…</a>
+        <h5>Add NuGet packages and jump-start your coding</h5>
+        NuGet makes it easy to install and update free libraries and tools.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
     </li>
 
     <li class="three">
-        <h5>find web hosting</h5>
-        you can easily find a web hosting company that offers the right mix of features
+        <h5>Find Web Hosting</h5>
+        You can easily find a web hosting company that offers the right mix of features
         and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?linkid=245157">learn more…</a>
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
     </li>
 </ol>
--->*@
