@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+         <script src="//connect.facebook.net/en_US/all.js"></script>
     </head>
     <body>
         <header>
@@ -16,7 +17,7 @@
                 </div>
                 <div class="float-right">
                     <section id="login">
-                        @Html.Partial("_LoginPartial")
+                        <div>@Html.Partial("FacebookLoginPartial")</div>
                     </section>
                     <nav>
                         <ul id="menu">
