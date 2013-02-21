@@ -166,6 +166,7 @@
     <Compile Include="Controllers\FacebookLoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MarketController.cs" />
+    <Compile Include="Controllers\PostingController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -240,7 +241,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -300,6 +300,7 @@
     <Content Include="Views\Demo\Index.cshtml" />
     <Content Include="Views\Demo\DemoPartial.cshtml" />
     <Content Include="Views\Shared\FacebookLoginPartial.cshtml" />
+    <Content Include="Views\Posting\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
