@@ -185,6 +185,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\BookStack.png" />
+    <Content Include="Content\Images\header-bg.png" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -359,10 +361,10 @@
     <Content Include="Views\Demo\DemoPartial.cshtml" />
     <Content Include="Views\Shared\FacebookLoginPartial.cshtml" />
     <Content Include="Views\Posting\Index.cshtml" />
+    <Content Include="Views\Market\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
     <Folder Include="Views\FacebookLogin\" />
   </ItemGroup>
   <ItemGroup>

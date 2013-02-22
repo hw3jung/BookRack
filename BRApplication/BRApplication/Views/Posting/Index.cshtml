@@ -2,101 +2,92 @@
 
 .PostContainer
 {
-margin-left:auto;
-margin-right:auto;
-width:30%;
+    text-align:center;
+    width:100%;
+    border: 2px solid red; 
 }
+
+    .PostContainer > .post {
+        margin: 0px auto; 
+        width:50%;
+        text-align:left;  
+        border: 2px solid green; 
+    }
 
 .PostTable
 {
-margin-left:auto;
-margin-right:auto;
-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
 }
 
+  
+
 .SecondColumn {
-width:80%;
+    width:80%;
 }
 
 strong.small
 {
-line-height: 20px
+    line-height: 20px
 }
 
 h2.big
 {
-line-height: 40px
+    line-height: 40px
 }
+
+    .PostHeader {
+        background-image: url("@Url.Content("Images/header-bg.png")");
+        background-repeat: repeat-x; 
+        font-size: 14px;
+        font-family:Verdana; 
+        color:#FFF; 
+        vertical-align:middle; 
+    }
 
 </style>
 
 <div class="PostContainer">
-    <h2 class="big">Managerial Accounting - Ninth Canadian Edition</h2>
-    <table class="PostTable">
-        <tr>
-            <td>
-                <strong class="small">Course: </strong>
-            </td>
-            <td class="SecondColumn">
-                @ViewBag.Course
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <strong class="small">Condition: </strong>
-            </td>
-            <td class="SecondColumn">
-                @ViewBag.Condition
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <strong class="small">Posted by: </strong>
-            </td>
-            <td class="SecondColumn">
-                @ViewBag.PostedBy
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <strong class="small">Date Posted: </strong>
-            </td>
-            <td class="SecondColumn">
-                @ViewBag.Date<br/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <strong class="small">ISBN: </strong>
-            </td>
-            <td class="SecondColumn">
-                @ViewBag.ISBN<br/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <strong class="small">Author: </strong>
-            </td>
-            <td class="SecondColumn">
-                @ViewBag.Author
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <strong class="small">Price: </strong>
-            </td>
-            <td class="SecondColumn">
-                $@ViewBag.price<br/>
-            </td>
-        </tr>
-    </table>
-       
-    <div>
-        @Html.TextBox("bidPriceTextBox", "", new { style="width:40%" })
-        <input id="BidButton" type="submit" value="Submit" />
-    </div>
-
-    <div>
-        Want to buy this textbook? <input id="BuyButton" type="submit" value="Buy Now!" />
+    <div class="post">
+        <div class="PostHeader">
+            <img src="@Url.Content("~/Content/Images/BookStack.png")" alt="BookStack"/>
+            Managerial Accounting - Ninth Canadian Edition
+        </div>
+        <div>
+            <strong class="small">Course </strong>
+             @ViewBag.Course
+        </div>
+        <div>
+            <strong class="small">Condition </strong>
+            @ViewBag.Condition
+        </div>
+        <div>
+            <strong class="small">Posted by </strong>
+            @ViewBag.PostedBy
+        </div>
+        <div>
+            <strong class="small">Date Posted </strong>
+             @ViewBag.Date
+        </div>
+        <div>
+             <strong class="small">ISBN </strong>
+            @ViewBag.ISBN
+        </div>       
+        <div>
+            <strong class="small">Author </strong>
+            @ViewBag.Author
+        </div>
+        <div>
+            <strong class="small">Price </strong>
+            $@ViewBag.price
+        </div>       
+        <div>
+            @Html.TextBox("bidPriceTextBox", "", new { style="width:40%" })
+            <input id="BidButton" type="button" value="Submit" />
+        </div>
+        <div>
+            Want to buy this textbook? <input id="BuyButton" type="button" value="Buy Now!" />
+        </div>
     </div>
 </div>
