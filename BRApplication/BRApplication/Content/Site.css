@@ -24,14 +24,23 @@ a {
 }
 
     a.header {
-        top: 35%;
-        width: 18%;
         margin-left: 2.5%;
         margin-right: 2.5%;
         font-weight: bold;
         font-size: 50pt;
         border: 1px solid black;
+        position: relative; 
+        top: -50%;
     }
+
+        a.header[class] {
+            margin-left: 2.5%;
+            margin-right: 2.5%;
+            font-weight: bold;
+            font-size: 50pt;
+            border: 1px solid black;
+            position: static;
+        }
 
     a.body {
         font: 20pt;
@@ -50,16 +59,37 @@ div {
     }
 
     div.home {
-        height: 100%;
         width: 100%;
         text-align: center;
+        position: absolute; 
+        top: 50%;
     }
+
+        div.home[class] {
+            width: 100%;
+            text-align: center;
+            display: table-cell; 
+            vertical-align: middle;
+            position: static;
+        }
 
     div.body {
         background-color: #efeeef;
         clear: both;
+        width: 100%;
         height: 80%;
+        overflow: hidden;
+        position: relative;
     }
+
+        div.body[class] {
+            background-color: #efeeef;
+            clear: both;
+            width: 100%;
+            height: 80%;
+            display: table;
+            position: static;
+        }
 
     div.sidebar {
         -webkit-background-clip: padding-box;
