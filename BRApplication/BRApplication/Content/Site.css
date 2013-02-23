@@ -517,7 +517,7 @@ textarea {
         width: auto;
     }
 
-    input[type="submit"],
+  /*  input[type="submit"],
     input[type="button"],
     button {
         background-color: #d3dce0;
@@ -528,15 +528,15 @@ textarea {
         padding: 7px;
         margin-right: 8px;
         width: auto;
-    }
+    } */
 
-    td input[type="submit"],
+   /* td input[type="submit"],
     td input[type="button"],
     td button {
         font-size: 1em;
         padding: 4px;
         margin-right: 4px;
-    }
+    } */
 
 /* info and errors */
 .message-info {
