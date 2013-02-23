@@ -4,14 +4,15 @@
 {
     text-align:center;
     width:100%;
-    border: 2px solid red; 
+    border: 0px solid red; 
 }
 
     .PostContainer > .post {
         margin: 0px auto; 
-        width:50%;
+        width:90%;
         text-align:left;  
-        border: 2px solid green; 
+        border: 0px solid green; 
+        padding:10px; 
     }
 
 .PostTable
@@ -27,23 +28,43 @@
     width:80%;
 }
 
-strong.small
-{
-    line-height: 20px
-}
+    .DetailLine {
+        background-color: #FFEF91;
+        border-bottom: 1px solid #E0D69D; 
+        padding:5px;
+    }
 
-h2.big
-{
-    line-height: 40px
-}
+    .DetailLine:hover {
+        background-color: #F0F7A1;
+    }
 
     .PostHeader {
-        background-image: url("@Url.Content("Images/header-bg.png")");
+        background-image: url('/Content/Images/header-bg.png');
         background-repeat: repeat-x; 
-        font-size: 14px;
+        font-size: 18px;
         font-family:Verdana; 
-        color:#FFF; 
-        vertical-align:middle; 
+        color:#4D2D02; 
+        vertical-align:middle;
+ 
+        padding:5px; 
+        padding-bottom:10px; 
+        border: 1px solid #BA4B06; 
+    }
+
+    .DetailLine ul {
+        width:100%;
+    }
+
+    .DetailLine ul li {
+        display:inline;
+        list-style-type:none;
+    }
+    .label {
+        width:30%;
+        font-weight:bold;
+    }
+    .value {
+        width:70%;
     }
 
 </style>
@@ -54,39 +75,41 @@ h2.big
             <img src="@Url.Content("~/Content/Images/BookStack.png")" alt="BookStack"/>
             Managerial Accounting - Ninth Canadian Edition
         </div>
-        <div>
-            <strong class="small">Course </strong>
-             @ViewBag.Course
+        <div class="DetailLine">
+            <ul> 
+                <li class="label">Course</li>
+                <li class="value">@ViewBag.Course</li>
+            </ul>
         </div>
-        <div>
-            <strong class="small">Condition </strong>
+        <div class="DetailLine">
+            <strong>Condition </strong>
             @ViewBag.Condition
         </div>
-        <div>
-            <strong class="small">Posted by </strong>
+        <div class="DetailLine">
+            <strong>Posted by </strong>
             @ViewBag.PostedBy
         </div>
-        <div>
-            <strong class="small">Date Posted </strong>
+        <div class="DetailLine">
+            <strong>Date Posted </strong>
              @ViewBag.Date
         </div>
-        <div>
-             <strong class="small">ISBN </strong>
+        <div class="DetailLine">
+             <strong>ISBN </strong>
             @ViewBag.ISBN
         </div>       
-        <div>
-            <strong class="small">Author </strong>
+        <div class="DetailLine">
+            <strong>Author </strong>
             @ViewBag.Author
         </div>
-        <div>
-            <strong class="small">Price </strong>
+        <div class="DetailLine">
+            <strong>Price </strong>
             $@ViewBag.price
         </div>       
-        <div>
-            @Html.TextBox("bidPriceTextBox", "", new { style="width:40%" })
+        <div class="DetailLine">
+            @Html.TextBox("txtBidPrice")
             <input id="BidButton" type="button" value="Submit" />
         </div>
-        <div>
+        <div class="DetailLine">
             Want to buy this textbook? <input id="BuyButton" type="button" value="Buy Now!" />
         </div>
     </div>
