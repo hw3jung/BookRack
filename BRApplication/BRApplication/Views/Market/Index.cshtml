@@ -2,7 +2,8 @@
 
 <style type="text/css">
     .MarketContainer {
-
+        width: 90%;
+        
     }
 
 </style>
@@ -11,9 +12,9 @@
     @{
         foreach (var m in Model) {
                if (m.IsBuy) {
-                   @Html.Partial("SellPost_Partial"); 
+                   @Html.Partial("SellPost_Partial", m); 
                 } else {
-                   @Html.Partial("BuyPost_Partial"); 
+                   @Html.Partial("BuyPost_Partial", m); 
                }
         }
     }

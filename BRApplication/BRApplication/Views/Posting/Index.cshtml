@@ -1,4 +1,6 @@
-﻿<style type="text/css">
+﻿@model BRApplication.Models.MarketPostModel
+
+<style type="text/css">
     .DvSubmit {
         width:100%; 
         text-align:right; 
@@ -11,48 +13,48 @@
     <div class="post">
         <div class="PostHeader">
             <img src="@Url.Content("~/Content/Images/BookStack.png")" alt="BookStack"/>&nbsp
-            Managerial Accounting - Ninth Canadian Edition
+            @Model.Title
         </div>
         <div class="DetailLine">
             <ul> 
                 <li class="label">Course</li>
-                <li class="value">@ViewBag.Course</li>
+                <li class="value">@Model.Course</li>
             </ul>
         </div>
         <div class="DetailLine">
             <ul> 
                 <li class="label">Condition</li>
-                <li class="value">@ViewBag.Condition</li>
+                <li class="value">@Model.Condition</li>
             </ul>
         </div>
         <div class="DetailLine">
             <ul> 
                 <li class="label">Posted by</li>
-                <li class="value">@ViewBag.PostedBy</li>
+                <li class="value">@Model.PostedBy</li>
             </ul>
         </div>
         <div class="DetailLine">
             <ul> 
                 <li class="label">Date Posted</li>
-                <li class="value">@ViewBag.Date</li>
+                <li class="value">@Model.datePosted</li>
             </ul>
         </div>
         <div class="DetailLine">
             <ul> 
                 <li class="label">ISBN</li>
-                <li class="value">@ViewBag.ISBN</li>
+                <li class="value">@Model.ISBN</li>
             </ul>
         </div>       
         <div class="DetailLine">
             <ul> 
                 <li class="label">Author</li>
-                <li class="value">@ViewBag.Author</li>
+                <li class="value">@Model.Author</li>
             </ul>
         </div>
         <div class="DetailLine">
             <ul> 
                 <li class="label">Price</li>
-                <li class="value">$@ViewBag.Price</li>
+                <li class="value">$@Model.Price</li>
             </ul>
         </div>       
         <div class="DetailLine">

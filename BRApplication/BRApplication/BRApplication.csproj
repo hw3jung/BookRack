@@ -176,7 +176,9 @@
     <Compile Include="Handlers\TableWrapper.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CourseInfo.cs" />
+    <Compile Include="Models\CustomViewEngine.cs" />
     <Compile Include="Models\DemoModel.cs" />
+    <Compile Include="Models\MarketPostModel.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Textbook.cs" />
     <Compile Include="Models\Transaction.cs" />
@@ -186,7 +188,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\BookStack.png" />
-    <Content Include="Content\Images\header-bg.png" />
+    <Content Include="Content\Images\MarketBuy.png" />
+    <Content Include="Content\Images\MarketSell.png" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -358,10 +361,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Demo\Index.cshtml" />
-    <Content Include="Views\Demo\DemoPartial.cshtml" />
+    <Content Include="Views\Demo\Partial Views\DemoPartial.cshtml" />
     <Content Include="Views\Shared\FacebookLoginPartial.cshtml" />
     <Content Include="Views\Posting\Index.cshtml" />
     <Content Include="Views\Market\Index.cshtml" />
+    <Content Include="Views\Market\Partial Views\BuyPost_Partial.cshtml" />
+    <Content Include="Views\Market\Partial Views\SellPost_Partial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
