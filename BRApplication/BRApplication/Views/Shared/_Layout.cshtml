@@ -19,6 +19,7 @@
             $(function () {
 
                 $("#accordion").accordion();
+                $(".accordion").accordion();
 
                 var availableTags = [
                     "ActionScript",
@@ -142,11 +143,11 @@
 @*        <div class="sidebar">
             <a class="body">Create Your Own Posting</a>
         </div>*@
-        <div class="body">
+        <div class="body generic-background">
             @RenderSection("featured", required: false)
             @RenderBody()
         </div>
-        <footer>
+        <footer class="dark-background">
             <div class="content-wrapper">
                 <div class="float-left">
                     <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
