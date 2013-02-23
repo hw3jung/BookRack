@@ -185,6 +185,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\effects\stroll\stroll.css" />
+    <Content Include="Content\effects\stroll\stroll.min.css" />
     <Content Include="Content\Images\BookStack.png" />
     <Content Include="Content\Images\header-bg.png" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
@@ -316,6 +318,8 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\stroll.js" />
+    <Content Include="Scripts\stroll.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -362,6 +366,7 @@
     <Content Include="Views\Shared\FacebookLoginPartial.cshtml" />
     <Content Include="Views\Posting\Index.cshtml" />
     <Content Include="Views\Market\Index.cshtml" />
+    <Content Include="Views\Posting\AddPosting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

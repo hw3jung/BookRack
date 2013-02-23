@@ -13,6 +13,7 @@ namespace BRApplication.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Title = "Managerial Accounting - Ninth Canadian Edition";
             ViewBag.Course = "AFM 102";
             ViewBag.Condition = "Good";
             ViewBag.PostedBy = "John Smith";
@@ -23,5 +24,9 @@ namespace BRApplication.Controllers
             return View();
         }
 
+        public ActionResult AddPosting()
+        {
+            return View();
+        }
     }
 }
