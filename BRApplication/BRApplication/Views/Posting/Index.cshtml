@@ -31,7 +31,7 @@
     .DetailLine {
         background-color: #FFEF91;
         border-bottom: 1px solid #E0D69D; 
-        padding:5px;
+        padding:0px;
     }
 
     .DetailLine:hover {
@@ -39,32 +39,33 @@
     }
 
     .PostHeader {
-        background-image: url('/Content/Images/header-bg.png');
-        background-repeat: repeat-x; 
         font-size: 18px;
+        font-weight:bold; 
         font-family:Verdana; 
         color:#4D2D02; 
         vertical-align:middle;
- 
         padding:5px; 
         padding-bottom:10px; 
-        border: 1px solid #BA4B06; 
+        border-bottom: 3px solid #BA4B06; 
     }
 
     .DetailLine ul {
         width:100%;
+        display:inline-block; 
     }
 
     .DetailLine ul li {
-        display:inline;
+        display:inline-block;
         list-style-type:none;
     }
     .label {
-        width:30%;
+        width:20%;
         font-weight:bold;
+        float: left;
     }
     .value {
         width:70%;
+        float: left;
     }
 
 </style>
@@ -82,34 +83,46 @@
             </ul>
         </div>
         <div class="DetailLine">
-            <strong>Condition </strong>
-            @ViewBag.Condition
+            <ul> 
+                <li class="label">Condition</li>
+                <li class="value">@ViewBag.Condition</li>
+            </ul>
         </div>
         <div class="DetailLine">
-            <strong>Posted by </strong>
-            @ViewBag.PostedBy
+            <ul> 
+                <li class="label">Posted by</li>
+                <li class="value">@ViewBag.PostedBy</li>
+            </ul>
         </div>
         <div class="DetailLine">
-            <strong>Date Posted </strong>
-             @ViewBag.Date
+            <ul> 
+                <li class="label">Date Posted</li>
+                <li class="value">@ViewBag.Date</li>
+            </ul>
         </div>
         <div class="DetailLine">
-             <strong>ISBN </strong>
-            @ViewBag.ISBN
+            <ul> 
+                <li class="label">ISBN</li>
+                <li class="value">@ViewBag.ISBN</li>
+            </ul>
         </div>       
         <div class="DetailLine">
-            <strong>Author </strong>
-            @ViewBag.Author
+            <ul> 
+                <li class="label">Author</li>
+                <li class="value">@ViewBag.Author</li>
+            </ul>
         </div>
         <div class="DetailLine">
-            <strong>Price </strong>
-            $@ViewBag.price
+            <ul> 
+                <li class="label">Price</li>
+                <li class="value">$@ViewBag.Price</li>
+            </ul>
         </div>       
-        <div class="DetailLine">
+        <div style="float:left;">
             @Html.TextBox("txtBidPrice")
             <input id="BidButton" type="button" value="Submit" />
         </div>
-        <div class="DetailLine">
+        <div style="float:right;">
             Want to buy this textbook? <input id="BuyButton" type="button" value="Buy Now!" />
         </div>
     </div>
