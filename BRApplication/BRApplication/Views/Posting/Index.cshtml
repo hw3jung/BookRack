@@ -1,4 +1,13 @@
-﻿<div class="PostContainer">
+﻿<style type="text/css">
+    .DvSubmit {
+        width:100%; 
+        text-align:right; 
+        border-top:3px solid #BA4B06;
+    }
+
+</style>
+
+<div class="PostContainer">
     <div class="post">
         <div class="PostHeader">
             <img src="@Url.Content("~/Content/Images/BookStack.png")" alt="BookStack"/>&nbsp
@@ -46,12 +55,40 @@
                 <li class="value">$@ViewBag.Price</li>
             </ul>
         </div>       
-        <div style="float:left;">
-            @Html.TextBox("txtBidPrice")
-            <input id="BidButton" type="button" value="Submit" />
+        <div class="DetailLine">
+            <ul>
+                <li class="label">Negotiate a price?</li>
+                <li class="value"><input type="checkbox" id="cbNegotiationPrice"/></li>
+            </ul>
         </div>
-        <div style="float:right;">
-            Want to buy this textbook? <input id="BuyButton" type="button" value="Buy Now!" />
+        <div class="DetailLine" id="dvNegotiate" style="display:none;">
+            <ul>
+                <li class="label">Offer</li>
+                <li class="value">
+                    @Html.TextBox("txtBidPrice")
+                     
+                </li>
+            </ul>
+        </div>
+        <div class="DvSubmit">
+             <input id="btnBuy" type="submit" value="Buy Now!" />
+             <input id="btnBid" type="submit" value="Submit" style="display:none;" />
         </div>
     </div>
 </div>
+
+<script type="text/ecmascript">
+    $(function () {
+        $('#cbNegotiationPrice').click(function () {
+            if ($(this).is(':checked')) {
+                $("#btnBuy").hide();
+                $("#btnBid").show();
+                $("#dvNegotiate").show();
+            } else {
+                $("#btnBid").hide();
+                $("#btnBuy").show();
+                $("#dvNegotiate").hide();
+            }
+        });
+    }); 
+</script>
